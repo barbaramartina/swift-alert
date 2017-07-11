@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
 [![Platform](https://img.shields.io/cocoapods/p/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
 
+![simulator_screen_shot_9 1](https://user-images.githubusercontent.com/815372/28084027-a40bbba0-6677-11e7-947d-38b7f04bda99.png)
+
+![example 2](https://github.com/barbaramartina/swift-alert/blob/master/Resources/Simulator_Screen_Shot_9%20(1).png)
+
+
+
 # Overview
 
 **Alert** is a subclass of *UIView* which contains a title, subtitle & an accessory view. **Alert** allows presenting a view for a short time on the screen providing feedback for the user. It's a small utility library, easy to use in case you don't need to configure too many parameters, and at the same time versatile enoguh to be customisable with your defined accessories (which can be anything inheriting from UIView), title & subtitle font, colors, tintColor of the accessory, measures, blur effect type or background color, border radius, presentation time, tap handling.
