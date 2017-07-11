@@ -1,0 +1,29 @@
+{
+  "name": "Alert",
+  "version": "0.1.0",
+  "summary": "A simple and versatile view to present quick messages, written in Swift.",
+  "description": "A simple alert pod to present quick, auto dismissed messages to the user.\nAllows you to customise background, borders, colors, font families and sizes, messages,\nicons, displaying times.\nOffers a convenient set of default icons and presentations.",
+  "homepage": "https://github.com/barbaramartina/swift-alert",
+  "license": {
+    "type": "GNU General Public License v3.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "git": "barbararodeker@gmail.com"
+  },
+  "source": {
+    "git": "",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://github.com/barbaramartina",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Alert/Classes/**/*",
+  "resource_bundles": {
+    "Alert": [
+      "Alert/Assets/**/*.{storyboard,xib,xcassets,json,imageset,png}"
+    ]
+  },
+  "frameworks": "UIKit"
+}
