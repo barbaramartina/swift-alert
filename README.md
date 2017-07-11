@@ -217,3 +217,7 @@ git, barbararodeker@gmail.com
 ## License
 
 Alert is available under the MIT license. See the LICENSE file for more info.
+
+# Contributions
+
+Are more than welcome, please file an issue, or fork the repository and submit a pull request.
