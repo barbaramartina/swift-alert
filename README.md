@@ -29,7 +29,7 @@ The following properties can be configured:
 
 A *Configuration* is an struct containing the mentioned variables and providing default values for all on the in its initializer. 
 
-```
+```swift
 public struct Configuration {
     let backgroundColor: UIColor
     let backgroundEffect: Effect
