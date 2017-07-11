@@ -22,7 +22,7 @@ pod 'Alert', :git => "https://github.com/barbaramartina/swift-alert"
 
 ## Author
 
-git, barbara@komoot.de
+git, barbararodeker@gmail.de
 
 ## License
 
