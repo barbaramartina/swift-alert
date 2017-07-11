@@ -7,9 +7,6 @@
 
 ![simulator_screen_shot_9 1](https://user-images.githubusercontent.com/815372/28084027-a40bbba0-6677-11e7-947d-38b7f04bda99.png)
 
-![example 2](https://github.com/barbaramartina/swift-alert/blob/master/Resources/Simulator_Screen_Shot_9%20(1).png)
-
-
 
 # Overview
 
@@ -82,10 +79,121 @@ public struct Configuration {
 }
 ```
 
+### Background effects
+
+Different type of blur effects can be selected. **If a background color was set that will be removed. Effects take precedence**.
+
+```swift
+public enum Effect {
+    case none
+    case blurLight
+    case blurExtraLight
+    case blurDark
+    case blurRegular
+    case blurProminent
+}
+```
+
+### Measures
+
+By default you can choose between these measures: 
+
+- small
+- normal 
+- big
+- full screen
+
+Or defined your custom measure, by providing a percentage of the width and height of the superview you want to cover. 
+
+```swift
+public enum Measure {
+    case small
+    case normal
+    case big
+    case fullscreen
+    case custom(widthPercentage: CGFloat,heightPercentage: CGFloat) // must be <= 1
+}
+```
+
+### Accessories
+
+A top view can be added by using the default provided accessories or defining a custom one 
+
+```swift
+public enum Accessory {
+    case none
+    case delete
+    case edit
+    case like
+    case activity
+    case custom(view: UIView)
+    
+    public func view() -> UIView {
+        switch self {
+        case .none:                 return UIView()
+        case .delete:               return UIImageView(image: UIImage(named: "delete",
+                                                                  in: Alert.bundle,
+                                                                  compatibleWith: nil)?.withRenderingMode(.alwaysTemplate))
+        case .edit:                 return UIImageView(image: UIImage(named: "edit",
+                                                                in: Alert.bundle,
+                                                                compatibleWith: nil)?.withRenderingMode(.alwaysTemplate))
+        case .like:                 return UIImageView(image: UIImage(named: "like",
+                                                                in: Alert.bundle,
+                                                                compatibleWith: nil)?.withRenderingMode(.alwaysTemplate))
+        case .activity:             return UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        case .custom(let v):        return v
+        }
+    }
+}
+```
+
 ## Example
-An example of the resulting message view: 
+Some example of the resulting message view: 
 
 ![simulator_screen_shot_9 1](https://user-images.githubusercontent.com/815372/28084027-a40bbba0-6677-11e7-947d-38b7f04bda99.png)
+
+![Example 2](https://github.com/barbaramartina/swift-alert/blob/master/Resources/Simulator_Screen_Shot_9%20(1).png)
+![Example 3](https://github.com/barbaramartina/swift-alert/blob/master/Resources/Simulator_Screen_Shot_9%20(3).png)
+
+### Animated image example 
+
+Animated images into image views are also a possibility (any kind of UIView subclass indeed).
+
+```swift
+        let anotherContainer = UIView(frame: .zero)
+        view.addSubview(anotherContainer)
+        anotherContainer.translatesAutoresizingMaskIntoConstraints = false
+        anotherContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        anotherContainer.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        anotherContainer.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        anotherContainer.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        anotherContainer.widthAnchor.constraint(greaterThanOrEqualToConstant: 300).isActive = true
+        view.layoutSubviews()
+        
+        let img = UIImage.animatedImageNamed("man", duration: 1)
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        imgView.image = img
+        imgView.contentMode = .scaleToFill
+        
+        
+                        alert.show(inView: anotherContainer,
+                                   with: Configuration(backgroundColor: .clear,
+                                                       backgroundEffect: .blurLight,
+                                                       titleFont: UIFont.systemFont(ofSize: 16),
+                                                       titleColor: .darkText,
+                                                       accessory: .custom(view: imgView),
+                                                       measure: .fullscreen,
+                                                       accessoryTintColor: UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 1)),
+                                   title: "Let's go for a walk!",
+                                   subtitle: "")
+
+```
+
+You can achieve something like this with the code above:
+
+![Example Animated](https://github.com/barbaramartina/swift-alert/blob/master/Resources/letswalk.gif)
+
+
 
 ## Example
 
