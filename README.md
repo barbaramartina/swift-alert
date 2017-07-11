@@ -5,6 +5,31 @@
 [![License](https://img.shields.io/cocoapods/l/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
 [![Platform](https://img.shields.io/cocoapods/p/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
 
+# Summary
+The initial version of the library which allows presenting a view for a short time on the screen providing feedback.
+The view can be configured through a *Configuration* instance and presented on any UIView.
+
+## Configuration
+The following properties can be configured: 
+
+- backgroundColor
+- backgroundEffect: type of blur effect 
+- titleFont
+- subtitleFont
+- titleColor
+- subtitleColor
+- borderRadius
+- accessory: default provided or custom defined.
+- measure: small, normal, big, full screen or custom. See source code documentation for more details.
+- accessoryTintColor
+- presentationTime: how much the view remains on the screen
+- tapToDismissEnable: should the user touch in the background and dismiss the view?
+
+## Example
+An example of the resulting message view: 
+
+![simulator_screen_shot_9 1](https://user-images.githubusercontent.com/815372/28084027-a40bbba0-6677-11e7-947d-38b7f04bda99.png)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
