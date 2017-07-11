@@ -1,10 +1,5 @@
 # Swift Alert
 
-[![CI Status](http://img.shields.io/travis/git/Alert.svg?style=flat)](https://travis-ci.org/git/Alert)
-[![Version](https://img.shields.io/cocoapods/v/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
-[![License](https://img.shields.io/cocoapods/l/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
-[![Platform](https://img.shields.io/cocoapods/p/Alert.svg?style=flat)](http://cocoapods.org/pods/Alert)
-
 ![simulator_screen_shot_9 1](https://user-images.githubusercontent.com/815372/28084027-a40bbba0-6677-11e7-947d-38b7f04bda99.png)
 
 
